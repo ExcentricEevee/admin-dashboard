@@ -61,19 +61,22 @@ input[type="search"] {
     background-color: rgba(211, 221, 255, .5);
 }
 
-form, .user-info, .user-intro, .buttons {
+form,
+.user-info,
+.user-intro,
+.buttons {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.user-info > img {
+.user-info>img {
     height: 36px;
     width: 36px;
     border-radius: 24px;
 }
 
-.user-intro > img {
+.user-intro>img {
     height: 48px;
     width: 48px;
     border-radius: 24px;
@@ -150,7 +153,7 @@ form, .user-info, .user-intro, .buttons {
     background-color: rgba(211, 221, 255, .5);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .projects {
@@ -159,26 +162,37 @@ form, .user-info, .user-intro, .buttons {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20px repeat(3, 1fr);
     gap: 12px;
-    padding: 12px;
+    padding: 24px 16px;
 }
 
-.projects > h2 {
+.projects>h2 {
     grid-column: 1 / span 2;
 }
 
 .projects .card {
     background-color: #fff;
+    border-left: 5px solid #eba35c;
     border-radius: 12px;
     box-shadow: 1px 2px 2px #ccc;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
 }
 
-.interactables > .favorite {
-    /* wait that's not a .svg heck */
-    background-image: url(../assets/images/star-plus.png);
-    color: #FF0000;
+.projects .content {
+    padding: 12px 64px;
 }
 
-.announcements .card, .trending .card {
+.interactables {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.announcements .card,
+.trending .card {
     background-color: #fff;
     width: 400px;
     border-radius: 12px;
