@@ -10,6 +10,15 @@
     height: 100vh;
 }
 
+#search-form,
+.user-info,
+.user-intro,
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 h2 {
     font-weight: 500;
     font-size: 1.1rem;
@@ -27,7 +36,7 @@ h3 {
     padding: 0 40px;
 }
 
-.header .user-info {
+.user-info {
     justify-content: flex-end;
 }
 
@@ -46,11 +55,12 @@ h3 {
     border-radius: 24px;
 }
 
-.header form button {
+#search-form button {
     border: none;
     height: 36px;
     width: 36px;
     background-color: inherit;
+    margin-top: 4px;
 }
 
 input[type="search"] {
@@ -61,13 +71,8 @@ input[type="search"] {
     background-color: rgba(211, 221, 255, .5);
 }
 
-form,
-.user-info,
-.user-intro,
-.buttons {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.user-info .username {
+    font-weight: 500;
 }
 
 .user-info>img {
@@ -77,9 +82,9 @@ form,
 }
 
 .user-intro>img {
-    height: 48px;
-    width: 48px;
-    border-radius: 24px;
+    height: 64px;
+    width: 64px;
+    border-radius: 36px;
 }
 
 .sidebar {
@@ -153,7 +158,9 @@ form,
     background-color: rgba(211, 221, 255, .5);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    
 }
 
 .projects {
@@ -163,6 +170,11 @@ form,
     grid-template-rows: 20px repeat(3, 1fr);
     gap: 12px;
     padding: 24px 16px;
+}
+
+.projects p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .projects>h2 {
@@ -191,10 +203,36 @@ form,
     padding: 0 20px;
 }
 
+.announcements, .trending {
+    margin-top: 24px;
+}
+
 .announcements .card,
 .trending .card {
+    padding: 16px;
     background-color: #fff;
-    width: 400px;
+
     border-radius: 12px;
     box-shadow: 1px 2px 4px #ccc;
+    font-size: 0.8rem;
+}
+
+.announcements .card .content,
+.trending .card .content {
+    padding: 4px 0;
+}
+
+.trending a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.announcements p,
+.trending p {
+    color: #444;
+}
+
+.trending a:visited, .trending a:link {
+    color: #5db3f8;
 }
