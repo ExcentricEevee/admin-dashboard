@@ -6,10 +6,6 @@ body {
   /* grid-template-rows: 1fr 3fr; */
 }
 
-body > * {
-  border: 1px dashed blueviolet;
-}
-
 /* --- Sidebar Styling --- */
 
 .sidebar {
@@ -34,8 +30,46 @@ body > * {
   gap: 12px;
 }
 
+/* --- Header Styling --- */
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+header > * { 
+  /* visual grid */
+  border: 1px dashed blueviolet;
+}
+
+.project-links ul {
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-links a {
+  padding: 8px 32px;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #5075cf;
+}
+
+.project-links a:visited {
+  color: #fff;
+}
+
+
+/* Experimental style resets */
+
 ul {
-  /* Reset these styles */
   padding: 0;
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
