@@ -102,6 +102,10 @@ main {
   gap: 24px;
 }
 
+img {
+  max-width: 24px;
+}
+
 /* Experimental style resets */
 
 ul {
