@@ -51,6 +51,12 @@ header > * {
   width: 100%;
 }
 
+.user-display {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .project-links ul {
   height: 100%;
 
