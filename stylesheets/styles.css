@@ -81,6 +81,26 @@ header {
   color: #fff;
 }
 
+/* --- Main Section Styling --- */
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.projects-section {
+  grid-row: 1 / 3;
+}
+
+.projects-section h2 {
+  margin-bottom: 24px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
 
 /* Experimental style resets */
 
