@@ -42,9 +42,18 @@ header > * {
   border: 1px dashed blueviolet;
 }
 
+.search_form {
+  display: flex;
+  align-items: center;
+}
+
+.search_form input {
+  width: 100%;
+}
+
 .project-links ul {
   height: 100%;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
