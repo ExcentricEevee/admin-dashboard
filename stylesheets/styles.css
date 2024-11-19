@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "Montserrat";
+  src: 
+    url("../media/fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../media/fonts/montserrat-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  font-family: "Montserrat", system-ui, Roboto, Helvetica, Arial, sans-serif;
   max-height: 100vh;
 
   display: grid;
   grid-template-columns: 1fr 4fr;
-  /* grid-template-rows: 1fr 3fr; */
 }
 
 /* --- Sidebar Styling --- */
