@@ -9,6 +9,7 @@
 
 :root {
   --royalblue: #5075cf;
+  --user-image-size: 64px;
 
   font-size: 16px;
   font-family: "Montserrat", system-ui, Roboto, Helvetica, Arial, sans-serif;
@@ -62,32 +63,52 @@ body {
 /* --- Header Styling --- */
 
 header {
+  padding: 24px;
+  font-weight: 700;
+  box-shadow: 2px 5px 5px #ddd;
+  
   display: grid;
   grid-template-columns: 2fr 1fr;
+  gap: 24px;
 }
 
 .search_form {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .search_form input {
   width: 100%;
+  /* Padding so input doesn't hug against the left edge */
+  padding-left: 8px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ddd;
+}
+
+.search_form input:focus {
+  outline: 2px solid #888;
 }
 
 .user-display {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
 }
 
 .user-greeting {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: calc(var(--user-image-size) + 16px) 1fr;
 }
 
 .user-greeting img {
   grid-row: 1 / 3;
+}
+
+.small {
+  font-size: 0.8rem;
 }
 
 .project-links ul {
@@ -113,6 +134,8 @@ header {
 /* --- Main Section Styling --- */
 
 main {
+  padding: 24px;
+  
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
@@ -141,7 +164,7 @@ img {
 }
 
 .user-icon {
-  max-width: 64px;
+  max-width: var(--user-image-size);
 }
 
 .user-icon-small {
