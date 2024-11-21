@@ -11,7 +11,6 @@
   /* Named after the Tailwind palettes */
   --blue-50: #eff6ff;
   --blue-600: #2563eb;
-  /* --royalblue: #5075cf; */
   --user-image-size: 64px;
 
   font-size: 16px;
@@ -67,18 +66,16 @@ header {
   background-color: var(--blue-50);
   padding: 24px;
   font-weight: 700;
-  box-shadow: 2px 5px 5px #ddd;
+  box-shadow: 1px 5px 5px #bbb;
   
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 24px;
   gap: 24px;
 }
 
 .search_form {
   display: flex;
   align-items: center;
-  gap: 12px;
   gap: 12px;
 }
 
@@ -88,16 +85,7 @@ header {
   padding-left: 8px;
   border: none;
   border-radius: 12px;
-  background-color: #ddd;
-}
-
-.search_form input:focus {
-  outline: 2px solid #888;
-  /* Padding so input doesn't hug against the left edge */
-  padding-left: 8px;
-  border: none;
-  border-radius: 12px;
-  background-color: #ddd;
+  background-color: #e5e7eb;
 }
 
 .search_form input:focus {
@@ -107,9 +95,7 @@ header {
 .user-display {
   display: flex;
   justify-content: center;
-  justify-content: center;
   align-items: center;
-  gap: 32px;
   gap: 32px;
 }
 
@@ -121,10 +107,6 @@ header {
 
 .user-greeting img {
   grid-row: 1 / 3;
-}
-
-.small {
-  font-size: 0.8rem;
 }
 
 .small {
@@ -154,15 +136,16 @@ header {
 /* --- Main Section Styling --- */
 
 main {
-  padding: 24px;
-  
-  padding: 24px;
+  /* Slate 200 */
+  background-color: #e2e8f0;
   
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
 .projects-section {
+  padding: 24px;
+  
   grid-row: 1 / 3;
 }
 
@@ -172,14 +155,47 @@ main {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
+}
+
+.card {
+  max-width: 400px;
+  padding: 24px;
+  background-color: var(--blue-50);
+  border-radius: 8px;
+  box-shadow: 
+    1px 2px 5px #999,
+    inset 8px 0px yellow;
+
+  display: grid;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.svg-container {
+  margin-top: 8px;
+  
+  place-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.announcements-section {
+  padding: 24px 24px 24px 0;
+}
+
+.trending-section {
+  padding: 0 24px 24px 0;
 }
 
 /* Image Sizing */
 
 img {
-  max-width: 24px;
+  width: 24px;
 }
 
 .user-icon,
@@ -188,12 +204,11 @@ img {
 }
 
 .user-icon {
-  max-width: var(--user-image-size);
-  max-width: var(--user-image-size);
+  width: var(--user-image-size);
 }
 
 .user-icon-small {
-  max-width: 36px;
+  width: 36px;
 }
 
 /* Style resets */
