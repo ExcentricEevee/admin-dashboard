@@ -19,6 +19,7 @@
 
 body {
   display: grid;
+  /* First column is sidebar, second is everything else */
   grid-template-columns: 300px 1fr;
 }
 
@@ -85,7 +86,7 @@ header {
   padding-left: 8px;
   border: none;
   border-radius: 12px;
-  background-color: #e5e7eb;
+  background-color: #d1d5db;
 }
 
 .search_form input:focus {
@@ -160,7 +161,6 @@ main {
 }
 
 .card {
-  max-width: 400px;
   padding: 24px;
   background-color: var(--blue-50);
   border-radius: 8px;
@@ -186,6 +186,24 @@ main {
 
 .announcements-section {
   padding: 24px 24px 24px 0;
+}
+
+.announcements {
+  background-color: var(--blue-50);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px #999;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.announcements h4 {
+  font-size: 0.8rem;
+}
+
+.announcements p {
+  font-size: 0.6rem;
 }
 
 .trending-section {
