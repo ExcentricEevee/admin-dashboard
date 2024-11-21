@@ -72,11 +72,13 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
+  gap: 24px;
 }
 
 .search_form {
   display: flex;
   align-items: center;
+  gap: 12px;
   gap: 12px;
 }
 
@@ -91,12 +93,23 @@ header {
 
 .search_form input:focus {
   outline: 2px solid #888;
+  /* Padding so input doesn't hug against the left edge */
+  padding-left: 8px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ddd;
+}
+
+.search_form input:focus {
+  outline: 2px solid #888;
 }
 
 .user-display {
   display: flex;
   justify-content: center;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
   gap: 32px;
 }
 
@@ -108,6 +121,10 @@ header {
 
 .user-greeting img {
   grid-row: 1 / 3;
+}
+
+.small {
+  font-size: 0.8rem;
 }
 
 .small {
@@ -137,6 +154,8 @@ header {
 /* --- Main Section Styling --- */
 
 main {
+  padding: 24px;
+  
   padding: 24px;
   
   display: grid;
@@ -169,6 +188,7 @@ img {
 }
 
 .user-icon {
+  max-width: var(--user-image-size);
   max-width: var(--user-image-size);
 }
 
